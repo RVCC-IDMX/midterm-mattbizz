@@ -1,47 +1,196 @@
 /* Journey to the Center of the Earth Practicum*/
 /* Matthew Bezerra*/
 
-header{
-
-    margin: 5rem;
-    padding:6px;
-    border: 4px solid #886644;
-    box-shadow: inset 3px 10px 13px -3px #000000;
-
-    
+* {
+    box-sizing:border-box;
+}
+html {
+    min-height:100%;
+    position: relative;
+}
+body{
+    background: linear-gradient(#765729, black);
+    max-width:80%;
+    margin: 0 auto;
+    padding:0;
+    margin-bottom:50px;
+    min-height:100vh;
 }
 
 
+/* header */
+header {
+    padding:1.85rem;
+    border: 4px solid #886644;
+    box-shadow: inset 4px 15px 10px -3px #000000;
+    background-image: url('../img/cave.jpg');
+    background-size: cover;
+    font-family:"Georgia";
+    color: white;
+    text-shadow: 4px 4px 1px black;  
+}
+
+/* navigation bar */
 nav{
-    margin: 5rem;
+    margin-top: 0.5rem;
+    margin-bottom:0.5rem;
     padding:6px;
     border: 4px solid #886644;
     box-shadow: inset 3px 10px 13px -3px #000000;
-
+    background-color: white;
+    opacity: 75%;
+    overflow:hidden;
 }
 
+nav ul{       
+    display:flex;
+    align-items: flex-start; 
+    justify-content:center;
+    list-style-type: none;
+}
 
-main{
+nav ul li {
+    padding-left: .5rem;
+    padding-right:.5rem;
+    border-left: 4px solid black;
+    border-right:4px solid black;
+}
 
-    margin: 5rem;
-    padding:6px;
+nav ul li:last-child {
+    border-right:none;
+}
+
+nav ul li:first-child {
+    border-left:none;
+}
+
+/* main styled to float */
+main {
+    float:left;
+    margin-right:3rem;
+    min-height: calc(100% - 60px);  
+    min-height: calc(100vh - 60px); 
+
+    padding:2rem;
     border: 4px solid #886644;
     box-shadow: inset 3px 10px 13px -3px #000000;
+    background-color: white;
+    opacity: 75%;
+    width: 65%;
+    min-height:100%;
+    float:left;
+    margin-bottom:7rem;
+}
+main p:first-of-type::first-line {
+    font-size:20px;
 }
 
-aside{
-    margin: 5rem;
-    padding:6px;
+@media screen and (max-width: 800px) {
+    
+    main {
+        margin-bottom:1rem;
+    }
+    aside {margin-bottom:7rem;}
+}
+/* aside floating to the right of main  */
+aside {
+    float:left;
+    width:25%;
+    background-color: black;
+    min-height: calc(100%);  
+    min-height: calc(100vh); 
+
+    padding-left:2rem;
+    padding-right:2rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
     border: 4px solid #886644;
-
     box-shadow: inset 3px 10px 13px -3px #000000;
+    background-color: white;
+    opacity: 75%;
+    margin-bottom:7rem;
 }
 
-footer{
-    margin: 5rem;
-    padding:6px;
+
+
+/* footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    left:0;
+    bottom:0;
+    height:100px;
     border: 4px solid #886644;
     box-shadow: inset 3px 10px 13px -3px #000000;
-
+    background-color: white;
+    opacity: 75%;
+    width:100%;
 }
 
+/* image styling */
+
+#cover {
+    height:20rem;
+    width:15rem;
+    float:left;
+    padding: 20px;
+}
+
+/* styled text */
+
+h2 {
+    border-bottom: 1px dotted #333;
+}
+
+span[lang]{
+    font-style:italic;
+}
+
+a{
+    color:#000000;
+    text-decoration: none;
+}
+a:hover{
+    color:#A52A2A;
+    text-decoration: underline;
+}
+
+.character{
+    font-weight:bold;
+}
+
+#cryptogram figcaption {
+    text-align: center;
+    font-style: italic;
+}
+
+#cryptogram img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+/* aside bookreviews styling  */
+
+.submission {
+    background-color:#dedad8;
+    opacity:75%;
+    padding:1.5rem;
+    border: 1px solid #333;
+}
+.submission:nth-child(3) {
+    margin-bottom:1.5rem;
+    margin-top:1.5rem;
+}
+
+.opinion {
+    color:black;
+}
+
+.signature {
+    font-style:italic;
+}
