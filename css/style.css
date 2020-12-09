@@ -111,7 +111,14 @@ aside {
     margin-bottom:7rem;
 }
 
-
+/*  mobile scaling for both aside and main  */
+@media screen and (max-width: 800px) {
+    main, aside {   
+      width: 100%;
+      padding: 0;
+      min-height:0;
+    }
+  }
 
 /* footer */
 footer {
